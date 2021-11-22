@@ -26,23 +26,32 @@
             <div class="input-group mb-3">
               <h2>Ingrese el monto de su prestamo: </h2>
               <span class="input-group-text">$</span>
-              <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" class="form-control" id="monto" aria-label="Dollar amount (with dot and two decimal places)">
             </div>
   
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" id="cuotas" aria-label="Default select example">
               <option selected>Selecciona la cantidad de cuotas</option>
-              <option value="1">6</option>
-              <option value="2">12</option>
-              <option value="3">24</option>
-              <option value="4">36</option>
+              <option value="1">Opcion 1 : 6 cuotas</option>
+              <option value="2">Opcion 2 : 12 cuotas</option>
+              <option value="3">Opcion 3 : 24 cuotas</option>
+              <option value="4">Opcion 4 : 36 cuotas</option>
             </select>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" id="jubilado" aria-label="Default select example">
               <option selected>Es usted jubilado/a?</option>
               <option value="1">Si,soy jubilado/a</option>
               <option value="2">No,no soy jubilado/a</option>
             </select>
-            <button class="btn btn-primary" type="submit">Simular</button>
+            <button class="btn btn-primary" type="submit" onclick="detallesPrestamo()">Simular</button>
+            
+
+            <ul id="lista">
+
+            </ul>
+            <div id="mensaje"></div>
+
+            <button class="btn btn-primary" type="submit" onclick="simularDevolucion()">Monto a devolver</button>
             <center>
+              <div id="div"></div>
               <h2 class="luego">Luego de simular tu prestamo, registrate y nos comunicamos con vos para asesorarte.</h2>
               <form>
                 <div class="mb-3">
@@ -58,7 +67,7 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" onclick="detallesPrestamo()">Submit</button>
               </form>
 
             </center>
